@@ -12,6 +12,9 @@ function getFormInput() {
   console.log(season);
   console.log(year);
 
+  document.getElementById('home-page').style.display = "none";
+  document.getElementById("loader").style.display = "inline-block";
+
   getAnime();
 
 }
@@ -76,6 +79,7 @@ function getAnimeData(data){
   }
   anime_list.sort(compare);
 
+  setTimeout(showList,500);
   console.log(anime_list);
 }
 
@@ -91,4 +95,9 @@ function compare(a, b) {
     comparison = -1;
   }
   return comparison * -1;
+}
+
+function showList(){
+  document.getElementById("loader").style.display = "none";
+  document.getElementById('list-page').style.display = "inline-block";
 }
