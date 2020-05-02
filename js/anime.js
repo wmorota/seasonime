@@ -74,5 +74,21 @@ function getAnimeData(data){
       image: anime_image
     });
   }
+  anime_list.sort(compare);
+
   console.log(anime_list);
+}
+
+// compare() sorts the anime_list array by highest to lowest score
+function compare(a, b) {
+  const scoreA = a.score;
+  const scoreB = b.score;
+
+  let comparison = 0;
+  if (scoreA > scoreB) {
+    comparison = 1;
+  } else if (scoreA < scoreB) {
+    comparison = -1;
+  }
+  return comparison * -1;
 }
