@@ -34,7 +34,6 @@ function getAnime(){
 
 function getAnimeData(data){
   anime_list = [];
-  console.log('hi');
   for(var i = 0; i < 20; i++){
     var name = data.anime[i].title;
     var score = data.anime[i].score;
@@ -48,7 +47,6 @@ function getAnimeData(data){
 
     var description = data.anime[i].synopsis;
     var episodes = data.anime[i].episodes;
-    var studio = data.anime[i].producers[0].name;
     var anime_image = data.anime[i].image_url;
 
     var air_date = data.anime[i].airing_start;
@@ -72,7 +70,6 @@ function getAnimeData(data){
       genres: genre_list,
       description: description,
       episodes: episodes,
-      studio: studio,
       air_date: air_date,
       image: anime_image
     });
