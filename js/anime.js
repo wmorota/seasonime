@@ -2,7 +2,7 @@ var season;
 var year;
 var anime_list = [];
 
-function getFormInput() {
+function getHomeFormInput() {
   var input_s = document.getElementById("season");
   season = input_s.options[input_s.selectedIndex].value;
 
@@ -16,7 +16,22 @@ function getFormInput() {
   document.getElementById("loader").style.display = "inline-block";
 
   getAnime();
+}
 
+function getListFormInput() {
+  var input_s = document.getElementById("list-season");
+  season = input_s.options[input_s.selectedIndex].value;
+
+  var input_y = document.getElementById("list-year");
+  year = input_y.options[input_y.selectedIndex].value;
+
+  console.log(season);
+  console.log(year);
+
+  //document.getElementById('home-page').style.display = "none";
+  document.getElementById("loader").style.display = "inline-block";
+
+  getAnime();
 }
 
 function getAnime(){
@@ -99,5 +114,9 @@ function compare(a, b) {
 
 function showList(){
   document.getElementById("loader").style.display = "none";
-  document.getElementById('list-page').style.display = "inline-block";
+  document.body.style.backgroundImage = "none";
+  document.body.style.backgroundColor = "#fffafa";
+
+  document.getElementById('list-page').style.display = "block";
+  document.getElementById('list-page-nav').style.display = "block";
 }
