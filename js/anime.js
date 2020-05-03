@@ -9,13 +9,19 @@ function getHomeFormInput() {
   var input_y = document.getElementById("year");
   year = input_y.options[input_y.selectedIndex].value;
 
-  console.log(season);
-  console.log(year);
+  if((season == "summer" && year == 2020) || (season == "fall" && year == 2020))
+  {
+    alert("The animes in this season have not started airing yet 🥴 Please try again.");
+  }
+  else{
+    console.log(season);
+    console.log(year);
 
-  document.getElementById('home-page').style.display = "none";
-  document.getElementById("loader").style.display = "inline-block";
+    document.getElementById('home-page').style.display = "none";
+    document.getElementById("loader").style.display = "inline-block";
 
-  getAnime();
+    getAnime();
+  }
 }
 
 function getListFormInput() {
@@ -51,6 +57,8 @@ function getAnime(){
 }
 
 function getAnimeData(data){
+  season = data.season_name;
+
   anime_list = [];
   for(var i = 0; i < 20; i++){
     var name = data.anime[i].title;
@@ -119,4 +127,6 @@ function showList(){
 
   document.getElementById('list-page').style.display = "block";
   document.getElementById('list-page-nav').style.display = "block";
+
+  document.getElementById('header').innerHTML = season + " " + year ;
 }

@@ -30,53 +30,10 @@
    ================================================== -->
    <link href="https://fonts.googleapis.com/css?family=Changa|Noto+Sans|Orbitron&display=swap" rel="stylesheet">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
 </head>
 
 <body>
-
-  <div id="list-page-nav" class="container" style="padding-top:2%;">
-    <div class="row">
-      <div id="seasonime-title" class="col-sm-2" style="margin-bottom:2%;">
-        SEASONIME
-      </div>
-      <div class="col-sm-4"></div>
-
-      <div class="col-sm-2" style="margin-bottom:2%;">
-        <form id="animeForm2" name="animeForm2" onsubmit="getListFormInput(); return false">
-          <select id="list-season" name="list-season" class="custom-select" required>
-              <option value="" selected disabled hidden><b>Season</b></option>
-              <option value="winter">Winter</option>
-              <option value="spring">Spring</option>
-              <option value="summer">Summer</option>
-              <option value="fall">Fall</option>
-            </select>
-      </div>
-
-      <div class="col-sm-2" style="margin-bottom:2%;">
-        <select id="list-year" name="list-year" class="custom-select" required>
-            <option value="" selected disabled hidden><b>Year</b></option>
-            <option value="2020">2020</option>
-            <option value="2019">2019</option>
-            <option value="2018">2018</option>
-            <option value="2017">2017</option>
-            <option value="2016">2016</option>
-            <option value="2015">2015</option>
-            <option value="2014">2014</option>
-            <option value="2013">2013</option>
-            <option value="2012">2012</option>
-            <option value="2011">2011</option>
-            <option value="2010">2010</option>
-        </select>
-      </div>
-
-      <div class="col-sm-2" style="margin-bottom:2%;">
-        <button id="list-search-btn" type="submit" class="search-btn">
-          <b>Search</b>
-        </button>
-      </form>
-      </div>
-    </div>
-  </div>
 
 <div id="home-page" class="container">
     <div class="row" >
@@ -132,11 +89,80 @@
     </div>
 </div>
 
+<div id="list-page-nav" class="container" style="padding-top:2%; z-index:2">
+  <div class="row">
+    <div id="seasonime-title" class="col-sm-2" style="margin-bottom:2%;">
+      SEASONIME
+    </div>
+    <div class="col-sm-4"></div>
+
+    <div class="col-sm-2" style="margin-bottom:2%;">
+      <form id="animeForm2" name="animeForm2" onsubmit="getListFormInput(); return false">
+        <select id="list-season" name="list-season" class="custom-select" required>
+            <option value="" selected disabled hidden><b>Season</b></option>
+            <option value="winter">Winter</option>
+            <option value="spring">Spring</option>
+            <option value="summer">Summer</option>
+            <option value="fall">Fall</option>
+          </select>
+    </div>
+
+    <div class="col-sm-2" style="margin-bottom:2%;">
+      <select id="list-year" name="list-year" class="custom-select" required>
+          <option value="" selected disabled hidden><b>Year</b></option>
+          <option value="2020">2020</option>
+          <option value="2019">2019</option>
+          <option value="2018">2018</option>
+          <option value="2017">2017</option>
+          <option value="2016">2016</option>
+          <option value="2015">2015</option>
+          <option value="2014">2014</option>
+          <option value="2013">2013</option>
+          <option value="2012">2012</option>
+          <option value="2011">2011</option>
+          <option value="2010">2010</option>
+      </select>
+    </div>
+
+    <div class="col-sm-2" style="margin-bottom:2%;">
+      <button id="list-search-btn" type="submit" class="search-btn">
+        <b>Search</b>
+      </button>
+    </form>
+    </div>
+  </div>
+</div>
+
 <div class="text-center" id="loader"></div>
 
+<div class="container">
+  <div id="list-page" class="text-center" style="display:none">
+    <h3 id="header"></h3>
+  </div>
 
-<div id="list-page" class="text-center" style="display:none">
-  <p> yeto</p>
+  <div class="row" style="background-color:#fff1f1; margin-top:3%; border-radius: 40px; padding-top:2%; padding-bottom: 2%; padding-left:1%;">
+    <div class="col-md-3" >
+      <div id="image-div" style="margin-top:2%;">
+      <img id="anime-img0" src="https://cdn.myanimelist.net/images/anime/1764/106659.jpg">
+      </div>
+    </div>
+    <div class="col-md-5">
+      <h6 id="anime-name0" style="margin-top:2%">Kaguya-sama wa Kokurasetai?: Tensai-tachi no Renai Zunousen</h6>
+      <p id="anime-genre0" style="margin-top:-1%">Comedy / Psychological / Romance / School / Seinen</p>
+      <p style="margin-top:-2%"> <span id="bold-info-text">Start Date:</span><span id="anime-sd0"> April 11, 2020</span> </p>
+      <p style="margin-top:-5%"> <span id="bold-info-text">Episodes:</span><span id="anime-ep0"> 12</span> </p>
+      <!-- <p id="mobile-score-row"> <span id="mobile-score0">Score: 8.79</span></p> --> 
+      <p id="see-desc">See Description ...</p>
+    </div>
+    <div class="col-md-1">
+
+    </div>
+    <div class="col-md-3">
+      <img id="rect-img" src="images/rectangle.svg" alt="">
+      <p id="score-row"> <span id="score-text">Score:</span><span id="anime-score0"> 8.79</span> </p>
+      <p id="add-to-list-text"><a href=""> Add to List + </a></p>
+    </div>
+  </div>
 </div>
 
 
