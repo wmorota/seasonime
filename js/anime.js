@@ -20,6 +20,10 @@ function getHomeFormInput() {
     document.getElementById('home-page').style.display = "none";
     document.getElementById("loader").style.display = "inline-block";
 
+    document.getElementById("list-season").value = season;
+    document.getElementById("list-year").value = year; 
+
+
     getAnime();
   }
 }

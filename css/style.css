@@ -50,7 +50,7 @@
   display: none;
 }
 
-#list-page-nav{
+#list-page-nav, #seasonime-title{
 position: -webkit-sticky; /* Safari & IE */
 position: sticky;
 top: 0;
