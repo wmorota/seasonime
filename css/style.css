@@ -123,20 +123,34 @@ body{
   font-weight: bold;
 }
 
+.row-list{
+  background-color:#fff1f1;
+  margin-top:3%;
+  border-radius: 40px;
+  padding-top:2%;
+  padding-bottom: 2%;
+  padding-left:1%;
+}
+
 #image-div{
 overflow: hidden;
 height:150px;
 width: 225px;
 border-radius: 30px ;
+margin-top:2%;
 }
 
-#anime-img0{
+#row0, #row1{
+  display: none;
+}
+
+#anime-img0, #anime-img1{
 position: relative;
 top: -50px;
 
 }
 
-#anime-name0{
+#anime-name0, #anime-name1{
   font-family: 'Changa', sans-serif;
   font-weight: bold;
   font-size: 15px;
@@ -144,11 +158,19 @@ top: -50px;
   margin-top:2%
 }
 
-#anime-genre0, #anime-desc0 {
+#anime-genre0, #anime-desc0,
+#anime-genre1, #anime-genre1 {
   font-family: 'Noto Sans', sans-serif;
   font-weight: 400;
   font-size: 12px;
   margin-top:-1%
+}
+
+#anime-sd0, #anime-ep0, #mobile-anime-score0,
+#anime-sd1, #anime-ep1, #mobile-anime-score1{
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: normal;
+  font-size: 12px;
 }
 
 #bold-info-text{
@@ -156,12 +178,6 @@ top: -50px;
   font-weight: bold;
   font-size: 12px;
   color: #a03237;
-}
-
-#anime-sd0, #anime-ep0, #mobile-anime-score0{
-  font-family: 'Noto Sans', sans-serif;
-  font-weight: normal;
-  font-size: 12px;
 }
 
 #rect-img{
@@ -177,6 +193,7 @@ top: -50px;
   margin-top:-5%
 }
 
+/* Smartphones */
 @media (min-width: 320px) and (max-width: 480px) {
 
 
@@ -252,7 +269,7 @@ top: -50px;
     font-size: 25px;
   }
 
-  #anime-score0{
+  #anime-score0, #anime-score1{
     font-family: 'Noto Sans', sans-serif;
     font-weight: bold;
     font-size: 25px;
@@ -312,7 +329,7 @@ top: -50px;
     font-size: 30px;
   }
 
-  #anime-score0{
+  #anime-score0, #anime-score1{
     font-family: 'Noto Sans', sans-serif;
     font-weight: bold;
     font-size: 30px;
