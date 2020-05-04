@@ -42,6 +42,16 @@ function getListFormInput() {
     document.getElementById('header').style.display = "none";
     document.getElementById("row0").style.display = "none";
     document.getElementById("row1").style.display = "none";
+    document.getElementById("row2").style.display = "none";
+    document.getElementById("row3").style.display = "none";
+    document.getElementById("row4").style.display = "none";
+    document.getElementById("row5").style.display = "none";
+    document.getElementById("row6").style.display = "none";
+    document.getElementById("row7").style.display = "none";
+    document.getElementById("row8").style.display = "none";
+    document.getElementById("row9").style.display = "none";
+    document.getElementById("row10").style.display = "none";
+
     document.getElementById("loader").style.display = "inline-block";
 
     getAnime();
@@ -80,7 +90,12 @@ function getAnimeData(data){
   }
 
     var description = data.anime[i].synopsis;
+
     var episodes = data.anime[i].episodes;
+    if(episodes == null){
+      episodes = "Still in production"
+    }
+
     var anime_image = data.anime[i].image_url;
 
     var air_date = data.anime[i].airing_start;
@@ -139,8 +154,28 @@ function showList(){
   document.getElementById('header').innerHTML = season + " " + year ;
   document.getElementById('header').style.display = "block";
 
+  for(var i = 0; i < 11 ; i++){
+    document.getElementById('anime-name' + i).innerHTML = anime_list[i].name;
+    document.getElementById('anime-genre' + i).innerHTML = (anime_list[i].genres).join(" / ");
+    document.getElementById('anime-sd' + i).innerHTML = " " + anime_list[i].air_date;
+    document.getElementById('anime-ep' + i).innerHTML = " " + anime_list[i].episodes;
+    document.getElementById('mobile-anime-score' + i).innerHTML = " " + anime_list[i].score;
+    document.getElementById('anime-score' + i).innerHTML = " " + anime_list[i].score;
+    document.getElementById('anime-img' + i).src = anime_list[i].image;
+  }
+
   document.getElementById('row0').style.display = "-webkit-flex";
   document.getElementById('row1').style.display = "-webkit-flex";
+  document.getElementById('row2').style.display = "-webkit-flex";
+  document.getElementById('row3').style.display = "-webkit-flex";
+  document.getElementById('row4').style.display = "-webkit-flex";
+  document.getElementById('row5').style.display = "-webkit-flex";
+  document.getElementById('row6').style.display = "-webkit-flex";
+  document.getElementById('row7').style.display = "-webkit-flex";
+  document.getElementById('row8').style.display = "-webkit-flex";
+  document.getElementById('row9').style.display = "-webkit-flex";
+  document.getElementById('row10').style.display = "-webkit-flex";
+
 
 }
 
