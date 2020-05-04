@@ -141,12 +141,14 @@ top: -50px;
   font-weight: bold;
   font-size: 15px;
   color: #a03237;
+  margin-top:2%
 }
 
 #anime-genre0, #anime-desc0 {
   font-family: 'Noto Sans', sans-serif;
   font-weight: 400;
   font-size: 12px;
+  margin-top:-1%
 }
 
 #bold-info-text{
@@ -156,7 +158,7 @@ top: -50px;
   color: #a03237;
 }
 
-#anime-sd0, #anime-ep0{
+#anime-sd0, #anime-ep0, #mobile-anime-score0{
   font-family: 'Noto Sans', sans-serif;
   font-weight: normal;
   font-size: 12px;
@@ -167,8 +169,78 @@ top: -50px;
    z-index:2;
 }
 
-/* If the screen size is 1024px wide or more */
+.start-date-row{
+  margin-top: -2%;
+}
+
+.episodes-row{
+  margin-top:-5%
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+
+  .start-date-row{
+    margin-top: -5%;
+  }
+
+  .episodes-row{
+    margin-top:-6%
+  }
+
+  #score-row, #rect-img, #add-to-list-text{
+    display:none;
+  }
+
+  .mobile-score-row{
+    margin-top: -6%;
+  }
+
+  .desc-row{
+    margin-top:-4%;
+  }
+
+
+}
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .info-col{
+    margin-left: 10%;
+  }
+
+  .start-date-row{
+    margin-top: -8%;
+  }
+
+  .episodes-row{
+    margin-top:-10%
+  }
+
+  #score-row, #rect-img, #add-to-list-text{
+    display:none;
+  }
+
+  .mobile-score-row{
+    margin-top: -10%;
+  }
+
+  .desc-row{
+    margin-top:-5%;
+  }
+
+}
+
+/* Laptop / Desktop that's 1024px width */
 @media screen and (min-width: 1024px) {
+  .episodes-row{
+    margin-top:-8%
+  }
+
+  .desc-row{
+    margin-top:-3%;
+  }
+
   #rect-img{
     margin-top:-9%;
      z-index:2;
@@ -205,10 +277,22 @@ top: -50px;
     transform: translate(-50%, -50%);
     color: #fff1f1;
   }
+
+  .mobile-score-row{
+    display:none;
+  }
 }
 
-/* If the screen size is 1440px wide or more */
-@media screen and (min-width: 1440px) {
+/* Laptop / Desktop that's 1281px width */
+@media (min-width: 1281px) {
+  .episodes-row{
+    margin-top:-5%
+  }
+
+  .desc-row{
+    margin-top:-1%;
+  }
+
   #rect-img{
     margin-top:-9%;
      z-index:2;
@@ -246,7 +330,12 @@ top: -50px;
     transform: translate(-50%, -50%);
     color: #fff1f1;
   }
+
+  .mobile-score-row{
+    display:none;
+  }
 }
+
 
 a{
   color: #fff1f1;
@@ -256,7 +345,7 @@ a:hover{
   color: #fff1f1;
 }
 
- #see-desc{
+ .desc-row{
    font-family: 'Noto Sans', sans-serif;
    font-weight: normal;
    font-size: 12px;
