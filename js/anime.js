@@ -2,6 +2,9 @@ var season;
 var year;
 var anime_list = [];
 
+var desc0 = false;
+var desc1 = false;
+
 function getHomeFormInput() {
   var input_s = document.getElementById("season");
   season = input_s.options[input_s.selectedIndex].value;
@@ -21,7 +24,7 @@ function getHomeFormInput() {
     document.getElementById("loader").style.display = "inline-block";
 
     document.getElementById("list-season").value = season;
-    document.getElementById("list-year").value = year; 
+    document.getElementById("list-year").value = year;
 
 
     getAnime();
@@ -92,6 +95,7 @@ function getAnimeData(data){
     var genre = data.anime[i].genres[j].name;
     genre_list.push(genre);
   }
+
 
     var description = data.anime[i].synopsis;
 
@@ -166,6 +170,7 @@ function showList(){
     document.getElementById('mobile-anime-score' + i).innerHTML = " " + anime_list[i].score;
     document.getElementById('anime-score' + i).innerHTML = " " + anime_list[i].score;
     document.getElementById('anime-img' + i).src = anime_list[i].image;
+
   }
 
   document.getElementById('row0').style.display = "-webkit-flex";
@@ -179,16 +184,62 @@ function showList(){
   document.getElementById('row8').style.display = "-webkit-flex";
   document.getElementById('row9').style.display = "-webkit-flex";
   document.getElementById('row10').style.display = "-webkit-flex";
-
-
 }
 
+function showDescription0(){
+  if(desc0 == false){
+    document.getElementById('anime-desc0').innerHTML = anime_list[0].description;
+    document.getElementById('anime-desc0').style.display = "block";
+    document.getElementById('bold-info-desc0').innerHTML = "Hide Description >";
+
+    return desc0 = true;
+  }
+  else{
+    document.getElementById('anime-desc0').style.display = "none";
+    document.getElementById('bold-info-desc0').innerHTML = "Show Description >";
+    return desc0 = false;
+  }
+}
+
+function showDescription1(){
+  if(desc1 == false){
+    document.getElementById('anime-desc1').innerHTML = anime_list[1].description;
+    document.getElementById('anime-desc1').style.display = "block";
+    document.getElementById('bold-info-desc1').innerHTML = "Hide Description >";
+
+    return desc1 = true;
+  }
+  else{
+    document.getElementById('anime-desc1').style.display = "none";
+    document.getElementById('bold-info-desc1').innerHTML = "Show Description >";
+    return desc1 = false;
+  }
+}
+
+function showDescription2(){
+  if(desc1 == false){
+    document.getElementById('anime-desc1').innerHTML = anime_list[1].description;
+    document.getElementById('anime-desc1').style.display = "block";
+    document.getElementById('bold-info-desc1').innerHTML = "Hide Description >";
+
+    return desc1 = true;
+  }
+  else{
+    document.getElementById('anime-desc1').style.display = "none";
+    document.getElementById('bold-info-desc1').innerHTML = "Show Description >";
+    return desc1 = false;
+  }
+}
+
+function showHome() {
+  window.location.href = 'https://stackoverflow.com/questions/1226714/how-to-get-the-browser-to-navigate-to-url-in-javascript';
+}
 
 /**
   Need to:
     - Output all rows
     - change URL
     - show description
-    - when user clicks Seasonime it goes to home page
+    - when user clicks Seasonime it goes to home page (DONE)
     - Add to list?
 */

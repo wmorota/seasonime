@@ -55,6 +55,11 @@ position: -webkit-sticky; /* Safari & IE */
 position: sticky;
 top: 0;
 background-color: #fffafa;
+cursor: pointer;
+}
+
+#seasonime-title:hover{
+  cursor: pointer;
 }
 
 body{
@@ -193,7 +198,9 @@ top: -50px;
   font-size: 12px;
 }
 
-#bold-info-text{
+#bold-info-text,
+#bold-info-desc0,
+#bold-info-desc1 {
   font-family: 'Noto Sans', sans-serif;
   font-weight: bold;
   font-size: 12px;
@@ -323,6 +330,10 @@ top: -50px;
 
 /* Laptop / Desktop that's 1281px width */
 @media (min-width: 1281px) {
+
+  #row-rect{
+    margin-top: -25%;
+  }
   .episodes-row{
     margin-top:-5%
   }
@@ -362,11 +373,10 @@ top: -50px;
   #add-to-list-text{
     font-family: 'Noto Sans', sans-serif;
     font-weight: normal;
-    font-size: 15px;
+    font-size: 13px;
     position: absolute;
-    top: 30%;
-    left: 30%;
-    transform: translate(-50%, -50%);
+    margin-top: 16%;
+    margin-left: 3%;
     color: #fff1f1;
   }
 

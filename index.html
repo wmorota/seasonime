@@ -91,7 +91,7 @@
 
 <div id="list-page-nav" class="container" style="padding-top:2%; z-index:2">
   <div class="row">
-    <div id="seasonime-title" class="col-sm-2" style="margin-bottom:2%;">
+    <div id="seasonime-title" class="col-sm-2" style="margin-bottom:2%;" onclick="showHome()">
       SEASONIME
     </div>
     <div class="col-sm-4"></div>
@@ -153,14 +153,19 @@
       <p class="start-date-row"> <span id="bold-info-text">Start Date:</span><span id="anime-sd0"></span> </p>
       <p class="episodes-row"> <span id="bold-info-text">Episodes:</span><span id="anime-ep0"></span> </p>
       <p class="mobile-score-row"> <span id="bold-info-text">Score</span><span id="mobile-anime-score0"></span> </p>
-      <p class="desc-row">See Description ...</p>
+      <p class="desc-row" onMouseOver="this.style.cursor='pointer'" onclick="showDescription0();" id="bold-info-desc0">Show Description > </p>
+      <p id="anime-desc0"></p>
     </div>
     <div class="col-md-1">
     </div>
     <div class="col-md-3">
       <img id="rect-img" src="images/rectangle.svg" alt="">
-      <p id="score-row"> <span id="score-text">Score:</span><span id="anime-score0"></span> </p>
-      <p id="add-to-list-text"><a href=""> Add to List + </a></p>
+      <div class="row" id="row-rect">
+        <div class="col-sm-12">
+          <p id="score-row"> <span id="score-text">Score:</span><span id="anime-score0"></span> </p>
+          <p id="add-to-list-text"><a href=""> Add to List + </a></p>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -177,14 +182,19 @@
       <p class="start-date-row"> <span id="bold-info-text">Start Date:</span><span id="anime-sd1"></span> </p>
       <p class="episodes-row"> <span id="bold-info-text">Episodes:</span><span id="anime-ep1"></span> </p>
       <p class="mobile-score-row"> <span id="bold-info-text">Score</span><span id="mobile-anime-score1"></span> </p>
-      <p class="desc-row">See Description ...</p>
+      <p class="desc-row" onMouseOver="this.style.cursor='pointer'" onclick="showDescription1();" id="bold-info-desc1">Show Description > </p>
+      <p id="anime-desc1"></p>
     </div>
     <div class="col-md-1">
     </div>
     <div class="col-md-3">
       <img id="rect-img" src="images/rectangle.svg" alt="">
-      <p id="score-row"> <span id="score-text">Score:</span><span id="anime-score1"></span> </p>
-      <p id="add-to-list-text"><a href=""> Add to List + </a></p>
+      <div class="row" id="row-rect">
+        <div class="col-sm-12">
+          <p id="score-row"> <span id="score-text">Score:</span><span id="anime-score1"></span> </p>
+          <p id="add-to-list-text"><a href=""> Add to List + </a></p>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -201,14 +211,19 @@
       <p class="start-date-row"> <span id="bold-info-text">Start Date:</span><span id="anime-sd2"></span> </p>
       <p class="episodes-row"> <span id="bold-info-text">Episodes:</span><span id="anime-ep2"></span> </p>
       <p class="mobile-score-row"> <span id="bold-info-text">Score</span><span id="mobile-anime-score2"></span> </p>
-      <p class="desc-row">See Description ...</p>
+      <p class="desc-row" onMouseOver="this.style.cursor='pointer'" onclick="showDescription2();" id="bold-info-desc2">Show Description > </p>
+      <p id="anime-desc2"></p>
     </div>
     <div class="col-md-1">
     </div>
     <div class="col-md-3">
       <img id="rect-img" src="images/rectangle.svg" alt="">
-      <p id="score-row"> <span id="score-text">Score:</span><span id="anime-score2"></span> </p>
-      <p id="add-to-list-text"><a href=""> Add to List + </a></p>
+      <div class="row" id="row-rect">
+        <div class="col-sm-12">
+          <p id="score-row"> <span id="score-text">Score:</span><span id="anime-score2"></span> </p>
+          <p id="add-to-list-text"><a href=""> Add to List + </a></p>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -231,8 +246,12 @@
     </div>
     <div class="col-md-3">
       <img id="rect-img" src="images/rectangle.svg" alt="">
-      <p id="score-row"> <span id="score-text">Score:</span><span id="anime-score3"></span> </p>
-      <p id="add-to-list-text"><a href=""> Add to List + </a></p>
+      <div class="row" id="row-rect">
+        <div class="col-sm-12">
+          <p id="score-row"> <span id="score-text">Score:</span><span id="anime-score3"></span> </p>
+          <p id="add-to-list-text"><a href=""> Add to List + </a></p>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -255,8 +274,12 @@
     </div>
     <div class="col-md-3">
       <img id="rect-img" src="images/rectangle.svg" alt="">
-      <p id="score-row"> <span id="score-text">Score:</span><span id="anime-score4"></span> </p>
-      <p id="add-to-list-text"><a href=""> Add to List + </a></p>
+      <div class="row" id="row-rect">
+        <div class="col-sm-12">
+          <p id="score-row"> <span id="score-text">Score:</span><span id="anime-score4"></span> </p>
+          <p id="add-to-list-text"><a href=""> Add to List + </a></p>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -279,8 +302,12 @@
     </div>
     <div class="col-md-3">
       <img id="rect-img" src="images/rectangle.svg" alt="">
-      <p id="score-row"> <span id="score-text">Score:</span><span id="anime-score5"></span> </p>
-      <p id="add-to-list-text"><a href=""> Add to List + </a></p>
+      <div class="row" id="row-rect">
+        <div class="col-sm-12">
+          <p id="score-row"> <span id="score-text">Score:</span><span id="anime-score5"></span> </p>
+          <p id="add-to-list-text"><a href=""> Add to List + </a></p>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -303,8 +330,12 @@
     </div>
     <div class="col-md-3">
       <img id="rect-img" src="images/rectangle.svg" alt="">
-      <p id="score-row"> <span id="score-text">Score:</span><span id="anime-score6"></span> </p>
-      <p id="add-to-list-text"><a href=""> Add to List + </a></p>
+      <div class="row" id="row-rect">
+        <div class="col-sm-12">
+          <p id="score-row"> <span id="score-text">Score:</span><span id="anime-score6"></span> </p>
+          <p id="add-to-list-text"><a href=""> Add to List + </a></p>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -327,8 +358,12 @@
     </div>
     <div class="col-md-3">
       <img id="rect-img" src="images/rectangle.svg" alt="">
-      <p id="score-row"> <span id="score-text">Score:</span><span id="anime-score7"></span> </p>
-      <p id="add-to-list-text"><a href=""> Add to List + </a></p>
+      <div class="row" id="row-rect">
+        <div class="col-sm-12">
+          <p id="score-row"> <span id="score-text">Score:</span><span id="anime-score7"></span> </p>
+          <p id="add-to-list-text"><a href=""> Add to List + </a></p>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -351,8 +386,12 @@
     </div>
     <div class="col-md-3">
       <img id="rect-img" src="images/rectangle.svg" alt="">
-      <p id="score-row"> <span id="score-text">Score:</span><span id="anime-score8"></span> </p>
-      <p id="add-to-list-text"><a href=""> Add to List + </a></p>
+      <div class="row" id="row-rect">
+        <div class="col-sm-12">
+          <p id="score-row"> <span id="score-text">Score:</span><span id="anime-score8"></span> </p>
+          <p id="add-to-list-text"><a href=""> Add to List + </a></p>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -375,8 +414,12 @@
     </div>
     <div class="col-md-3">
       <img id="rect-img" src="images/rectangle.svg" alt="">
-      <p id="score-row"> <span id="score-text">Score:</span><span id="anime-score9"></span> </p>
-      <p id="add-to-list-text"><a href=""> Add to List + </a></p>
+      <div class="row" id="row-rect">
+        <div class="col-sm-12">
+          <p id="score-row"> <span id="score-text">Score:</span><span id="anime-score9"></span> </p>
+          <p id="add-to-list-text"><a href=""> Add to List + </a></p>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -399,8 +442,12 @@
     </div>
     <div class="col-md-3">
       <img id="rect-img" src="images/rectangle.svg" alt="">
-      <p id="score-row"> <span id="score-text">Score:</span><span id="anime-score10"></span> </p>
-      <p id="add-to-list-text"><a href=""> Add to List + </a></p>
+      <div class="row" id="row-rect">
+        <div class="col-sm-12">
+          <p id="score-row"> <span id="score-text">Score:</span><span id="anime-score10"></span> </p>
+          <p id="add-to-list-text"><a href=""> Add to List + </a></p>
+        </div>
+      </div>
     </div>
   </div>
 
