@@ -200,7 +200,16 @@ top: -50px;
 
 #bold-info-text,
 #bold-info-desc0,
-#bold-info-desc1 {
+#bold-info-desc1,
+#bold-info-desc2,
+#bold-info-desc3,
+#bold-info-desc4,
+#bold-info-desc5,
+#bold-info-desc6,
+#bold-info-desc7,
+#bold-info-desc8,
+#bold-info-desc9,
+#bold-info-desc10 {
   font-family: 'Noto Sans', sans-serif;
   font-weight: bold;
   font-size: 12px;
@@ -321,7 +330,7 @@ top: -50px;
     font-weight: normal;
     font-size: 13px;
     position: absolute;
-    margin-top: 16%;
+    margin-top: 14%;
     margin-left: 25%;
     color: #fff1f1;
   }
@@ -378,7 +387,7 @@ top: -50px;
     font-weight: normal;
     font-size: 13px;
     position: absolute;
-    margin-top: 14%;
+    margin-top: 12%;
     margin-left: 22%;
     color: #fff1f1;
   }
