@@ -1,3 +1,5 @@
+# seasonime
+
 Seasonime is a web application for tracking trending and popular seasonal animes based off MyAnimeList.net's database. 
 
 This application was created with the help of Jikan API.
