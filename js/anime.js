@@ -13,6 +13,8 @@ var desc7 = false;
 var desc8 = false;
 var desc9 = false;
 var desc10 = false;
+var desc11 = false;
+var desc12 = false;
 
 function getHomeFormInput() {
   var input_s = document.getElementById("season");
@@ -66,6 +68,8 @@ function getListFormInput() {
     document.getElementById("row8").style.display = "none";
     document.getElementById("row9").style.display = "none";
     document.getElementById("row10").style.display = "none";
+    document.getElementById("row11").style.display = "none";
+    document.getElementById("row12").style.display = "none";
 
     document.getElementById("loader").style.display = "inline-block";
 
@@ -172,7 +176,7 @@ function showList(){
   document.getElementById('header').innerHTML = season + " " + year ;
   document.getElementById('header').style.display = "block";
 
-  for(var i = 0; i < 11 ; i++){
+  for(var i = 0; i < 13 ; i++){
     document.getElementById('anime-name' + i).innerHTML = anime_list[i].name;
     document.getElementById('anime-genre' + i).innerHTML = (anime_list[i].genres).join(" / ");
     document.getElementById('anime-sd' + i).innerHTML = " " + anime_list[i].air_date;
@@ -194,6 +198,8 @@ function showList(){
   document.getElementById('row8').style.display = "-webkit-flex";
   document.getElementById('row9').style.display = "-webkit-flex";
   document.getElementById('row10').style.display = "-webkit-flex";
+  document.getElementById('row11').style.display = "-webkit-flex";
+  document.getElementById('row12').style.display = "-webkit-flex";
 }
 
 function clearAllDescription(){
@@ -219,6 +225,10 @@ function clearAllDescription(){
   document.getElementById('bold-info-desc9').innerHTML = "Show Description >";
   document.getElementById('anime-desc10').style.display = "none";
   document.getElementById('bold-info-desc10').innerHTML = "Show Description >";
+  document.getElementById('anime-desc11').style.display = "none";
+  document.getElementById('bold-info-desc11').innerHTML = "Show Description >";
+  document.getElementById('anime-desc12').style.display = "none";
+  document.getElementById('bold-info-desc12').innerHTML = "Show Description >";
 
   desc0 = false;
   desc1 = false;
@@ -231,6 +241,8 @@ function clearAllDescription(){
   desc8 = false;
   desc9 = false;
   desc10 = false;
+  desc11 = false;
+  desc12 = false;
 }
 
 function showDescription0(){
@@ -401,11 +413,47 @@ function showHome() {
   window.location.href = 'https://stackoverflow.com/questions/1226714/how-to-get-the-browser-to-navigate-to-url-in-javascript';
 }
 
+function showDescription11(){
+  if(desc11 == false){
+    document.getElementById('anime-desc11').innerHTML = anime_list[11].description;
+    document.getElementById('anime-desc11').style.display = "block";
+    document.getElementById('bold-info-desc11').innerHTML = "Hide Description >";
+
+    return desc11 = true;
+  }
+  else{
+    document.getElementById('anime-desc11').style.display = "none";
+    document.getElementById('bold-info-desc11').innerHTML = "Show Description >";
+    return desc11 = false;
+  }
+}
+
+function showDescription12(){
+  if(desc12 == false){
+    document.getElementById('anime-desc12').innerHTML = anime_list[12].description;
+    document.getElementById('anime-desc12').style.display = "block";
+    document.getElementById('bold-info-desc12').innerHTML = "Hide Description >";
+
+    return desc12 = true;
+  }
+  else{
+    document.getElementById('anime-desc12').style.display = "none";
+    document.getElementById('bold-info-desc12').innerHTML = "Show Description >";
+    return desc12 = false;
+  }
+}
+
+function showHome() {
+  window.location.href = 'https://stackoverflow.com/questions/1226714/how-to-get-the-browser-to-navigate-to-url-in-javascript';
+}
+
 /**
   Need to:
     - Output all rows
-    - change URL
-    - show description
+    - change URL (LATER)
+    - filters
+    - show description (DONE)
     - when user clicks Seasonime it goes to home page (DONE)
+    - sign in / log in account
     - Add to list?
 */
