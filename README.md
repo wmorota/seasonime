@@ -4,7 +4,7 @@ Seasonime is a web application for tracking trending and popular seasonal animes
 
 This application was created with the help of Jikan API.
 
-# σ(≧ε≦ｏ)
+<b> σ(≧ε≦ｏ) </b>
 
 Designed by: Genesis Bautista <br>
 Developed by: Wesley Morota
