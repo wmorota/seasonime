@@ -131,7 +131,7 @@ function getAnimeData(data){
     var anime_image = data.anime[i].image_url;
 
     var air_date = data.anime[i].airing_start;
-    air_date = air_date.split('T')[0]; // takes off rest of date string taking 'Y'
+    air_date = air_date.split('T')[0];  // takes off rest of date string taking 'Y'
     var month = (air_date.split('-')[1]);
     if(month.charAt(0) == 0){
       month = month.charAt(1);
