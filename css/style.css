@@ -50,14 +50,6 @@
   display: none;
 }
 
-#list-page-nav, #seasonime-title{
-position: -webkit-sticky; /* Safari & IE */
-position: sticky;
-top: 0;
-background-color: #fffafa;
-cursor: pointer;
-}
-
 #seasonime-title:hover{
   cursor: pointer;
 }
@@ -260,7 +252,7 @@ top: -50px;
 }
 
 /* Smartphones */
-@media (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 767px) {
 
 
   .start-date-row{
@@ -281,6 +273,17 @@ top: -50px;
 
   .desc-row{
     margin-top:-4%;
+  }
+
+  #list-page-nav, #seasonime-title{
+    position: relative;
+    top: 0;
+    background-color: #fffafa;
+    cursor: pointer;
+  }
+
+  #loader{
+    margin-top:-1%;
   }
 
 
@@ -312,10 +315,27 @@ top: -50px;
     margin-top:-5%;
   }
 
+  #list-page-nav, #seasonime-title{
+  position: -webkit-sticky; /* Safari & IE */
+  position: sticky;
+  top: 0;
+  background-color: #fffafa;
+  cursor: pointer;
+  }
+
 }
 
 /* Laptop / Desktop that's 1024px width */
 @media screen and (min-width: 1024px) {
+
+  #list-page-nav, #seasonime-title{
+  position: -webkit-sticky; /* Safari & IE */
+  position: sticky;
+  top: 0;
+  background-color: #fffafa;
+  cursor: pointer;
+  }
+
   #row-rect{
     margin-top: -30%;
   }
@@ -373,6 +393,14 @@ top: -50px;
 
 /* Laptop / Desktop that's 1281px width */
 @media (min-width: 1281px) {
+
+  #list-page-nav, #seasonime-title{
+  position: -webkit-sticky; /* Safari & IE */
+  position: sticky;
+  top: 0;
+  background-color: #fffafa;
+  cursor: pointer;
+  }
 
   #row-rect{
     margin-top: -25%;
