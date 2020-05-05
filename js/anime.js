@@ -23,6 +23,7 @@ var desc17 = false;
 var desc18 = false;
 var desc19 = false;
 
+// getHomeFormInput() grabs user input from the home page to list page
 function getHomeFormInput() {
   var input_s = document.getElementById("season");
   season = input_s.options[input_s.selectedIndex].value;
@@ -35,9 +36,6 @@ function getHomeFormInput() {
     alert("The animes in this season have not started airing yet 🥴 Please try again.");
   }
   else{
-    console.log(season);
-    console.log(year);
-
     document.getElementById('home-page').style.display = "none";
     document.getElementById("loader").style.display = "inline-block";
 
@@ -48,6 +46,7 @@ function getHomeFormInput() {
   }
 }
 
+// getListFormInput() grabs user input from the list page to update on the same page
 function getListFormInput() {
   var input_s = document.getElementById("list-season");
   season = input_s.options[input_s.selectedIndex].value;
@@ -60,9 +59,6 @@ function getListFormInput() {
     alert("The animes in this season have not started airing yet 🥴 Please try again.");
   }
   else{
-    console.log(season);
-    console.log(year);
-
     document.getElementById('header').style.display = "none";
     document.getElementById("row0").style.display = "none";
     document.getElementById("row1").style.display = "none";
@@ -92,22 +88,24 @@ function getListFormInput() {
   }
 }
 
+// getAnime() grabs all needed data in the form of an online JSON file using Jikan API
 function getAnime(){
-  const jikan_url = "https://private-anon-4d8c741b7b-jikan.apiary-proxy.com/v3/season/" + year + "/" + season;
+  var proxy_url = "https://cors-anywhere.herokuapp.com/";
+  const jikan_url = "{JIKAN API}";
 
   // Fetch online JSON files from a given URL
-  fetch(jikan_url).then(response => {
+  fetch(proxy_url + jikan_url).then(response => {
       return response.json()
     })
     .then(data => {
-      console.log(data);
       getAnimeData(data);
     })
     .catch(err => {
-        // Do something for an error here
+        return err;
     })
 }
 
+// getAnimeData() grabs all elements and data from the JSON file and organizes it in an array
 function getAnimeData(data){
   season = data.season_name;
 
@@ -160,7 +158,6 @@ function getAnimeData(data){
   anime_list.sort(compare);
 
   setTimeout(showList,500);
-  console.log(anime_list);
 }
 
 // compare() sorts the anime_list array by highest to lowest score
@@ -177,6 +174,7 @@ function compare(a, b) {
   return comparison * -1;
 }
 
+// showList() outputs all needed data on the list page
 function showList(){
 
   document.getElementById("loader").style.display = "none";
@@ -221,6 +219,7 @@ function showList(){
   document.getElementById('row19').style.display = "-webkit-flex";
 }
 
+// clearAllDescription() clears each anime's description when page is reloaded or when user searches for a new season
 function clearAllDescription(){
   document.getElementById('anime-desc0').style.display = "none";
   document.getElementById('bold-info-desc0').innerHTML = "Show Description >";
@@ -585,5 +584,5 @@ function showDescription19(){
 }
 
 function showHome() {
-  window.location.href = 'https://stackoverflow.com/questions/1226714/how-to-get-the-browser-to-navigate-to-url-in-javascript';
+  window.location.href = 'https://seasonime.web.app/';
 }
