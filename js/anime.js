@@ -121,8 +121,7 @@ function getAnimeData(data){
     for(var j = 0; j < genres.length; j++){
     var genre = data.anime[i].genres[j].name;
     genre_list.push(genre);
-  }
-
+    }
 
     var description = data.anime[i].synopsis;
 
@@ -198,7 +197,6 @@ function showList(){
     document.getElementById('mobile-anime-score' + i).innerHTML = " " + anime_list[i].score;
     document.getElementById('anime-score' + i).innerHTML = " " + anime_list[i].score;
     document.getElementById('anime-img' + i).src = anime_list[i].image;
-
   }
 
   document.getElementById('row0').style.display = "-webkit-flex";
@@ -589,14 +587,3 @@ function showDescription19(){
 function showHome() {
   window.location.href = 'https://stackoverflow.com/questions/1226714/how-to-get-the-browser-to-navigate-to-url-in-javascript';
 }
-
-/**
-  Need to:
-    - Output all rows (DONE)
-    - change URL (LATER)
-    - filters?
-    - show description (DONE)
-    - when user clicks Seasonime it goes to home page (DONE)
-    - sign in / log in account
-    - Add to list?
-*/
