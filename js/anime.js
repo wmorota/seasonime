@@ -15,6 +15,8 @@ var desc9 = false;
 var desc10 = false;
 var desc11 = false;
 var desc12 = false;
+var desc13 = false;
+var desc14 = false;
 
 function getHomeFormInput() {
   var input_s = document.getElementById("season");
@@ -70,6 +72,8 @@ function getListFormInput() {
     document.getElementById("row10").style.display = "none";
     document.getElementById("row11").style.display = "none";
     document.getElementById("row12").style.display = "none";
+    document.getElementById("row13").style.display = "none";
+    document.getElementById("row14").style.display = "none";
 
     document.getElementById("loader").style.display = "inline-block";
 
@@ -176,7 +180,7 @@ function showList(){
   document.getElementById('header').innerHTML = season + " " + year ;
   document.getElementById('header').style.display = "block";
 
-  for(var i = 0; i < 13 ; i++){
+  for(var i = 0; i < 15 ; i++){
     document.getElementById('anime-name' + i).innerHTML = anime_list[i].name;
     document.getElementById('anime-genre' + i).innerHTML = (anime_list[i].genres).join(" / ");
     document.getElementById('anime-sd' + i).innerHTML = " " + anime_list[i].air_date;
@@ -200,6 +204,8 @@ function showList(){
   document.getElementById('row10').style.display = "-webkit-flex";
   document.getElementById('row11').style.display = "-webkit-flex";
   document.getElementById('row12').style.display = "-webkit-flex";
+  document.getElementById('row13').style.display = "-webkit-flex";
+  document.getElementById('row14').style.display = "-webkit-flex";
 }
 
 function clearAllDescription(){
@@ -229,6 +235,10 @@ function clearAllDescription(){
   document.getElementById('bold-info-desc11').innerHTML = "Show Description >";
   document.getElementById('anime-desc12').style.display = "none";
   document.getElementById('bold-info-desc12').innerHTML = "Show Description >";
+  document.getElementById('anime-desc13').style.display = "none";
+  document.getElementById('bold-info-desc13').innerHTML = "Show Description >";
+  document.getElementById('anime-desc14').style.display = "none";
+  document.getElementById('bold-info-desc14').innerHTML = "Show Description >";
 
   desc0 = false;
   desc1 = false;
@@ -243,6 +253,8 @@ function clearAllDescription(){
   desc10 = false;
   desc11 = false;
   desc12 = false;
+  desc13 = false;
+  desc14 = false;
 }
 
 function showDescription0(){
@@ -409,10 +421,6 @@ function showDescription10(){
   }
 }
 
-function showHome() {
-  window.location.href = 'https://stackoverflow.com/questions/1226714/how-to-get-the-browser-to-navigate-to-url-in-javascript';
-}
-
 function showDescription11(){
   if(desc11 == false){
     document.getElementById('anime-desc11').innerHTML = anime_list[11].description;
@@ -440,6 +448,36 @@ function showDescription12(){
     document.getElementById('anime-desc12').style.display = "none";
     document.getElementById('bold-info-desc12').innerHTML = "Show Description >";
     return desc12 = false;
+  }
+}
+
+function showDescription13(){
+  if(desc13 == false){
+    document.getElementById('anime-desc13').innerHTML = anime_list[13].description;
+    document.getElementById('anime-desc13').style.display = "block";
+    document.getElementById('bold-info-desc13').innerHTML = "Hide Description >";
+
+    return desc13 = true;
+  }
+  else{
+    document.getElementById('anime-desc13').style.display = "none";
+    document.getElementById('bold-info-desc13').innerHTML = "Show Description >";
+    return desc13 = false;
+  }
+}
+
+function showDescription14(){
+  if(desc14 == false){
+    document.getElementById('anime-desc14').innerHTML = anime_list[14].description;
+    document.getElementById('anime-desc14').style.display = "block";
+    document.getElementById('bold-info-desc14').innerHTML = "Hide Description >";
+
+    return desc14 = true;
+  }
+  else{
+    document.getElementById('anime-desc14').style.display = "none";
+    document.getElementById('bold-info-desc14').innerHTML = "Show Description >";
+    return desc14 = false;
   }
 }
 

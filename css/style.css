@@ -145,19 +145,21 @@ border-radius: 30px ;
 margin-top:2%;
 }
 
-#row0, #row1, #row2, #row3, #row4, #row5, #row6, #row7, #row8, #row9, #row10, #row11, #row12 {
+#row0, #row1, #row2, #row3, #row4, #row5, #row6, #row7, #row8, #row9, #row10, #row11, #row12, #row13, #row14 {
   display: none;
 }
 
 #anime-img0, #anime-img1, #anime-img2, #anime-img3, #anime-img4, #anime-img5,
-#anime-img6, #anime-img7, #anime-img8, #anime-img9, #anime-img10, #anime-img11, #anime-img12 {
+#anime-img6, #anime-img7, #anime-img8, #anime-img9, #anime-img10, #anime-img11,
+#anime-img12, #anime-img13, #anime-img14 {
 position: relative;
 top: -50px;
 
 }
 
 #anime-name0, #anime-name1, #anime-name2, #anime-name3, #anime-name4, #anime-name5,
-#anime-name6, #anime-name7, #anime-name8, #anime-name9, #anime-name10, #anime-name11, #anime-name12 {
+#anime-name6, #anime-name7, #anime-name8, #anime-name9, #anime-name10, #anime-name11,
+#anime-name12, #anime-name13, #anime-name14 {
   font-family: 'Changa', sans-serif;
   font-weight: bold;
   font-size: 15px;
@@ -177,7 +179,9 @@ top: -50px;
 #anime-genre9, #anime-desc9,
 #anime-genre10, #anime-desc10,
 #anime-genre11, #anime-desc11,
-#anime-genre12, #anime-desc12 {
+#anime-genre12, #anime-desc12,
+#anime-genre13, #anime-desc13,
+#anime-genre14, #anime-desc14 {
   font-family: 'Noto Sans', sans-serif;
   font-weight: 400;
   font-size: 12px;
@@ -196,7 +200,9 @@ top: -50px;
 #anime-sd9, #anime-ep9, #mobile-anime-score9,
 #anime-sd10, #anime-ep10, #mobile-anime-score10,
 #anime-sd11, #anime-ep11, #mobile-anime-score11,
-#anime-sd12, #anime-ep12, #mobile-anime-score12{
+#anime-sd12, #anime-ep12, #mobile-anime-score12,
+#anime-sd13, #anime-ep13, #mobile-anime-score13,
+#anime-sd14, #anime-ep14, #mobile-anime-score14 {
   font-family: 'Noto Sans', sans-serif;
   font-weight: normal;
   font-size: 12px;
@@ -215,7 +221,9 @@ top: -50px;
 #bold-info-desc9,
 #bold-info-desc10,
 #bold-info-desc11,
-#bold-info-desc12 {
+#bold-info-desc12,
+#bold-info-desc13,
+#bold-info-desc14 {
   font-family: 'Noto Sans', sans-serif;
   font-weight: bold;
   font-size: 12px;
@@ -316,7 +324,8 @@ top: -50px;
   }
 
   #anime-score0, #anime-score1, #anime-score2, #anime-score3, #anime-score4, #anime-score5,
-  #anime-score6, #anime-score7, #anime-score8, #anime-score9, #anime-score10, #anime-score11, #anime-score12{
+  #anime-score6, #anime-score7, #anime-score8, #anime-score9, #anime-score10, #anime-score11,
+  #anime-score12, #anime-score13, #anime-score14 {
     font-family: 'Noto Sans', sans-serif;
     font-weight: bold;
     font-size: 25px;
@@ -380,7 +389,8 @@ top: -50px;
   }
 
   #anime-score0, #anime-score1, #anime-score2, #anime-score3, #anime-score4, #anime-score5,
-  #anime-score6, #anime-score7, #anime-score8, #anime-score9, #anime-score10, #anime-score11, #anime-score12 {
+  #anime-score6, #anime-score7, #anime-score8, #anime-score9, #anime-score10, #anime-score11,
+  #anime-score12, #anime-score13, #anime-score14 {
     font-family: 'Noto Sans', sans-serif;
     font-weight: bold;
     font-size: 30px;
