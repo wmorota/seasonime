@@ -2,26 +2,8 @@ var season;
 var year;
 var anime_list = [];
 
-var desc0 = false;
-var desc1 = false;
-var desc2 = false;
-var desc3 = false;
-var desc4 = false;
-var desc5 = false;
-var desc6 = false;
-var desc7 = false;
-var desc8 = false;
-var desc9 = false;
-var desc10 = false;
-var desc11 = false;
-var desc12 = false;
-var desc13 = false;
-var desc14 = false;
-var desc15 = false;
-var desc16 = false;
-var desc17 = false;
-var desc18 = false;
-var desc19 = false;
+var desc0 = desc1 = desc2 = desc3 = desc4 = desc5 = desc6 = desc7 = desc8 = desc9 =  false;
+var desc10 = desc11 = desc12 = desc13 = desc14 = desc15 = desc16 = desc17 = desc18 = desc19 =  false;
 
 // getHomeFormInput() grabs user input from the home page to list page
 function getHomeFormInput() {
@@ -31,7 +13,7 @@ function getHomeFormInput() {
   var input_y = document.getElementById("year");
   year = input_y.options[input_y.selectedIndex].value;
 
-  if((season == "summer" && year == 2020) || (season == "fall" && year == 2020))
+  if((season == "spring" && year == 2021) || (season == "summer" && year == 2021) || (season == "fall" && year == 2021))
   {
     alert("The animes in this season have not started airing yet 🥴 Please try again.");
   }
@@ -54,32 +36,18 @@ function getListFormInput() {
   var input_y = document.getElementById("list-year");
   year = input_y.options[input_y.selectedIndex].value;
 
-  if((season == "summer" && year == 2020) || (season == "fall" && year == 2020))
+  if((season == "spring" && year == 2021) || (season == "summer" && year == 2021) || (season == "fall" && year == 2021))
   {
     alert("The animes in this season have not started airing yet 🥴 Please try again.");
   }
   else{
     document.getElementById('header').style.display = "none";
-    document.getElementById("row0").style.display = "none";
-    document.getElementById("row1").style.display = "none";
-    document.getElementById("row2").style.display = "none";
-    document.getElementById("row3").style.display = "none";
-    document.getElementById("row4").style.display = "none";
-    document.getElementById("row5").style.display = "none";
-    document.getElementById("row6").style.display = "none";
-    document.getElementById("row7").style.display = "none";
-    document.getElementById("row8").style.display = "none";
-    document.getElementById("row9").style.display = "none";
-    document.getElementById("row10").style.display = "none";
-    document.getElementById("row11").style.display = "none";
-    document.getElementById("row12").style.display = "none";
-    document.getElementById("row13").style.display = "none";
-    document.getElementById("row14").style.display = "none";
-    document.getElementById("row15").style.display = "none";
-    document.getElementById("row16").style.display = "none";
-    document.getElementById("row17").style.display = "none";
-    document.getElementById("row18").style.display = "none";
-    document.getElementById("row19").style.display = "none";
+
+    // HIDES all 20 rows
+    for(var i = 0; i < 20; i++){
+      var row_to_hide = "row" + i;
+      document.getElementById(row_to_hide).style.display = "none";
+    }
 
     document.getElementById("loader").style.display = "inline-block";
 
@@ -131,7 +99,7 @@ function getAnimeData(data){
     var anime_image = data.anime[i].image_url;
 
     var air_date = data.anime[i].airing_start;
-    air_date = air_date.split('T')[0];  // takes off rest of date string taking 'Y'
+    air_date = air_date.split('T')[0]; // takes off rest of date string taking 'Y'
     var month = (air_date.split('-')[1]);
     if(month.charAt(0) == 0){
       month = month.charAt(1);
@@ -176,7 +144,6 @@ function compare(a, b) {
 
 // showList() outputs all needed data on the list page
 function showList(){
-
   document.getElementById("loader").style.display = "none";
   document.body.style.backgroundImage = "none";
   document.body.style.backgroundColor = "#fffafa";
@@ -195,394 +162,54 @@ function showList(){
     document.getElementById('mobile-anime-score' + i).innerHTML = " " + anime_list[i].score;
     document.getElementById('anime-score' + i).innerHTML = " " + anime_list[i].score;
     document.getElementById('anime-img' + i).src = anime_list[i].image;
+
+    // SHOWS all 20 rows (-webkit-flex)
+    var row_to_show = "row" + i;
+    document.getElementById(row_to_show).style.display = "-webkit-flex";
   }
 
-  document.getElementById('row0').style.display = "-webkit-flex";
-  document.getElementById('row1').style.display = "-webkit-flex";
-  document.getElementById('row2').style.display = "-webkit-flex";
-  document.getElementById('row3').style.display = "-webkit-flex";
-  document.getElementById('row4').style.display = "-webkit-flex";
-  document.getElementById('row5').style.display = "-webkit-flex";
-  document.getElementById('row6').style.display = "-webkit-flex";
-  document.getElementById('row7').style.display = "-webkit-flex";
-  document.getElementById('row8').style.display = "-webkit-flex";
-  document.getElementById('row9').style.display = "-webkit-flex";
-  document.getElementById('row10').style.display = "-webkit-flex";
-  document.getElementById('row11').style.display = "-webkit-flex";
-  document.getElementById('row12').style.display = "-webkit-flex";
-  document.getElementById('row13').style.display = "-webkit-flex";
-  document.getElementById('row14').style.display = "-webkit-flex";
-  document.getElementById('row15').style.display = "-webkit-flex";
-  document.getElementById('row16').style.display = "-webkit-flex";
-  document.getElementById('row17').style.display = "-webkit-flex";
-  document.getElementById('row18').style.display = "-webkit-flex";
-  document.getElementById('row19').style.display = "-webkit-flex";
 }
 
 // clearAllDescription() clears each anime's description when page is reloaded or when user searches for a new season
 function clearAllDescription(){
-  document.getElementById('anime-desc0').style.display = "none";
-  document.getElementById('bold-info-desc0').innerHTML = "Show Description >";
-  document.getElementById('anime-desc1').style.display = "none";
-  document.getElementById('bold-info-desc1').innerHTML = "Show Description >";
-  document.getElementById('anime-desc2').style.display = "none";
-  document.getElementById('bold-info-desc2').innerHTML = "Show Description >";
-  document.getElementById('anime-desc3').style.display = "none";
-  document.getElementById('bold-info-desc3').innerHTML = "Show Description >";
-  document.getElementById('anime-desc4').style.display = "none";
-  document.getElementById('bold-info-desc4').innerHTML = "Show Description >";
-  document.getElementById('anime-desc5').style.display = "none";
-  document.getElementById('bold-info-desc5').innerHTML = "Show Description >";
-  document.getElementById('anime-desc6').style.display = "none";
-  document.getElementById('bold-info-desc6').innerHTML = "Show Description >";
-  document.getElementById('anime-desc7').style.display = "none";
-  document.getElementById('bold-info-desc7').innerHTML = "Show Description >";
-  document.getElementById('anime-desc8').style.display = "none";
-  document.getElementById('bold-info-desc8').innerHTML = "Show Description >";
-  document.getElementById('anime-desc9').style.display = "none";
-  document.getElementById('bold-info-desc9').innerHTML = "Show Description >";
-  document.getElementById('anime-desc10').style.display = "none";
-  document.getElementById('bold-info-desc10').innerHTML = "Show Description >";
-  document.getElementById('anime-desc11').style.display = "none";
-  document.getElementById('bold-info-desc11').innerHTML = "Show Description >";
-  document.getElementById('anime-desc12').style.display = "none";
-  document.getElementById('bold-info-desc12').innerHTML = "Show Description >";
-  document.getElementById('anime-desc13').style.display = "none";
-  document.getElementById('bold-info-desc13').innerHTML = "Show Description >";
-  document.getElementById('anime-desc14').style.display = "none";
-  document.getElementById('bold-info-desc14').innerHTML = "Show Description >";
-  document.getElementById('anime-desc15').style.display = "none";
-  document.getElementById('bold-info-desc15').innerHTML = "Show Description >";
-  document.getElementById('anime-desc16').style.display = "none";
-  document.getElementById('bold-info-desc16').innerHTML = "Show Description >";
-  document.getElementById('anime-desc17').style.display = "none";
-  document.getElementById('bold-info-desc17').innerHTML = "Show Description >";
-  document.getElementById('anime-desc18').style.display = "none";
-  document.getElementById('bold-info-desc18').innerHTML = "Show Description >";
-  document.getElementById('anime-desc19').style.display = "none";
-  document.getElementById('bold-info-desc19').innerHTML = "Show Description >";
+  for(var i = 0; i < 20; i++){
+    var hide_description_row = "anime-desc" + i;
+    var set_description_label = "bold-info-desc" + i;
 
-  desc0 = false;
-  desc1 = false;
-  desc2 = false;
-  desc3 = false;
-  desc4 = false;
-  desc5 = false;
-  desc6 = false;
-  desc7 = false;
-  desc8 = false;
-  desc9 = false;
-  desc10 = false;
-  desc11 = false;
-  desc12 = false;
-  desc13 = false;
-  desc14 = false;
-  desc15 = false;
-  desc16 = false;
-  desc17 = false;
-  desc18 = false;
-  desc19 = false;
+    document.getElementById(hide_description_row).style.display = "none";
+    document.getElementById(set_description_label).innerHTML = "Show Description >";
+  }
+
+  desc0 = desc1 = desc2 = desc3 = desc4 = desc5 = desc6 = desc7 = desc8 = desc9 =  false;
+  desc10 = desc11 = desc12 = desc13 = desc14 = desc15 = desc16 = desc17 = desc18 = desc19 =  false;
 }
 
-function showDescription0(){
-  if(desc0 == false){
-    document.getElementById('anime-desc0').innerHTML = anime_list[0].description;
-    document.getElementById('anime-desc0').style.display = "block";
-    document.getElementById('bold-info-desc0').innerHTML = "Hide Description >";
-    return desc0 = true;
+// showDescription() displays / hides each anime's description when user clicks on "Show Description" or "Hide Description"
+function showDescription(show_description_id){
+  var desc_list = [desc0, desc1, desc2, desc3, desc4, desc5, desc6, desc7, desc8, desc9, 
+    desc10, desc11, desc12, desc13, desc14, desc15, desc16, desc17, desc18, desc19]
+  
+  var split_string_list = show_description_id.split('c')
+  var id = parseInt(split_string_list[1])
+
+  var anime_desc_id = 'anime-desc' + id;
+  var bold_info_desc_id = 'bold-info-desc' + id;
+
+  if(desc_list[id] == false){
+    document.getElementById(anime_desc_id).innerHTML = anime_list[id].description;
+    document.getElementById(anime_desc_id).style.display = "block";
+    document.getElementById(bold_info_desc_id).innerHTML = "Hide Description >";
+    return eval("desc" + id + " = " + true);
   }
   else{
-    document.getElementById('anime-desc0').style.display = "none";
-    document.getElementById('bold-info-desc0').innerHTML = "Show Description >";
-    return desc0 = false;
+    document.getElementById(anime_desc_id).style.display = "none";
+    document.getElementById(bold_info_desc_id).innerHTML = "Show Description >";
+    return eval("desc" + id + " = " + false);
   }
+
 }
 
-function showDescription1(){
-  if(desc1 == false){
-    document.getElementById('anime-desc1').innerHTML = anime_list[1].description;
-    document.getElementById('anime-desc1').style.display = "block";
-    document.getElementById('bold-info-desc1').innerHTML = "Hide Description >";
-
-    return desc1 = true;
-  }
-  else{
-    document.getElementById('anime-desc1').style.display = "none";
-    document.getElementById('bold-info-desc1').innerHTML = "Show Description >";
-    return desc1 = false;
-  }
-}
-
-function showDescription2(){
-  if(desc2 == false){
-    document.getElementById('anime-desc2').innerHTML = anime_list[2].description;
-    document.getElementById('anime-desc2').style.display = "block";
-    document.getElementById('bold-info-desc2').innerHTML = "Hide Description >";
-
-    return desc2 = true;
-  }
-  else{
-    document.getElementById('anime-desc2').style.display = "none";
-    document.getElementById('bold-info-desc2').innerHTML = "Show Description >";
-    return desc2 = false;
-  }
-}
-
-function showDescription3(){
-  if(desc3 == false){
-    document.getElementById('anime-desc3').innerHTML = anime_list[3].description;
-    document.getElementById('anime-desc3').style.display = "block";
-    document.getElementById('bold-info-desc3').innerHTML = "Hide Description >";
-
-    return desc3 = true;
-  }
-  else{
-    document.getElementById('anime-desc3').style.display = "none";
-    document.getElementById('bold-info-desc3').innerHTML = "Show Description >";
-    return desc3 = false;
-  }
-}
-
-function showDescription4(){
-  if(desc4 == false){
-    document.getElementById('anime-desc4').innerHTML = anime_list[4].description;
-    document.getElementById('anime-desc4').style.display = "block";
-    document.getElementById('bold-info-desc4').innerHTML = "Hide Description >";
-
-    return desc4 = true;
-  }
-  else{
-    document.getElementById('anime-desc4').style.display = "none";
-    document.getElementById('bold-info-desc4').innerHTML = "Show Description >";
-    return desc4 = false;
-  }
-}
-
-function showDescription5(){
-  if(desc5 == false){
-    document.getElementById('anime-desc5').innerHTML = anime_list[5].description;
-    document.getElementById('anime-desc5').style.display = "block";
-    document.getElementById('bold-info-desc5').innerHTML = "Hide Description >";
-
-    return desc5 = true;
-  }
-  else{
-    document.getElementById('anime-desc5').style.display = "none";
-    document.getElementById('bold-info-desc5').innerHTML = "Show Description >";
-    return desc5 = false;
-  }
-}
-
-function showDescription6(){
-  if(desc6 == false){
-    document.getElementById('anime-desc6').innerHTML = anime_list[6].description;
-    document.getElementById('anime-desc6').style.display = "block";
-    document.getElementById('bold-info-desc6').innerHTML = "Hide Description >";
-
-    return desc6 = true;
-  }
-  else{
-    document.getElementById('anime-desc6').style.display = "none";
-    document.getElementById('bold-info-desc6').innerHTML = "Show Description >";
-    return desc6 = false;
-  }
-}
-
-function showDescription7(){
-  if(desc7 == false){
-    document.getElementById('anime-desc7').innerHTML = anime_list[7].description;
-    document.getElementById('anime-desc7').style.display = "block";
-    document.getElementById('bold-info-desc7').innerHTML = "Hide Description >";
-
-    return desc7 = true;
-  }
-  else{
-    document.getElementById('anime-desc7').style.display = "none";
-    document.getElementById('bold-info-desc7').innerHTML = "Show Description >";
-    return desc7 = false;
-  }
-}
-
-function showDescription8(){
-  if(desc8 == false){
-    document.getElementById('anime-desc8').innerHTML = anime_list[8].description;
-    document.getElementById('anime-desc8').style.display = "block";
-    document.getElementById('bold-info-desc8').innerHTML = "Hide Description >";
-
-    return desc8 = true;
-  }
-  else{
-    document.getElementById('anime-desc8').style.display = "none";
-    document.getElementById('bold-info-desc8').innerHTML = "Show Description >";
-    return desc8 = false;
-  }
-}
-
-function showDescription9(){
-  if(desc9 == false){
-    document.getElementById('anime-desc9').innerHTML = anime_list[9].description;
-    document.getElementById('anime-desc9').style.display = "block";
-    document.getElementById('bold-info-desc9').innerHTML = "Hide Description >";
-
-    return desc9 = true;
-  }
-  else{
-    document.getElementById('anime-desc9').style.display = "none";
-    document.getElementById('bold-info-desc9').innerHTML = "Show Description >";
-    return desc9 = false;
-  }
-}
-
-function showDescription10(){
-  if(desc10 == false){
-    document.getElementById('anime-desc10').innerHTML = anime_list[10].description;
-    document.getElementById('anime-desc10').style.display = "block";
-    document.getElementById('bold-info-desc10').innerHTML = "Hide Description >";
-
-    return desc10 = true;
-  }
-  else{
-    document.getElementById('anime-desc10').style.display = "none";
-    document.getElementById('bold-info-desc10').innerHTML = "Show Description >";
-    return desc10 = false;
-  }
-}
-
-function showDescription11(){
-  if(desc11 == false){
-    document.getElementById('anime-desc11').innerHTML = anime_list[11].description;
-    document.getElementById('anime-desc11').style.display = "block";
-    document.getElementById('bold-info-desc11').innerHTML = "Hide Description >";
-
-    return desc11 = true;
-  }
-  else{
-    document.getElementById('anime-desc11').style.display = "none";
-    document.getElementById('bold-info-desc11').innerHTML = "Show Description >";
-    return desc11 = false;
-  }
-}
-
-function showDescription12(){
-  if(desc12 == false){
-    document.getElementById('anime-desc12').innerHTML = anime_list[12].description;
-    document.getElementById('anime-desc12').style.display = "block";
-    document.getElementById('bold-info-desc12').innerHTML = "Hide Description >";
-
-    return desc12 = true;
-  }
-  else{
-    document.getElementById('anime-desc12').style.display = "none";
-    document.getElementById('bold-info-desc12').innerHTML = "Show Description >";
-    return desc12 = false;
-  }
-}
-
-function showDescription13(){
-  if(desc13 == false){
-    document.getElementById('anime-desc13').innerHTML = anime_list[13].description;
-    document.getElementById('anime-desc13').style.display = "block";
-    document.getElementById('bold-info-desc13').innerHTML = "Hide Description >";
-
-    return desc13 = true;
-  }
-  else{
-    document.getElementById('anime-desc13').style.display = "none";
-    document.getElementById('bold-info-desc13').innerHTML = "Show Description >";
-    return desc13 = false;
-  }
-}
-
-function showDescription14(){
-  if(desc14 == false){
-    document.getElementById('anime-desc14').innerHTML = anime_list[14].description;
-    document.getElementById('anime-desc14').style.display = "block";
-    document.getElementById('bold-info-desc14').innerHTML = "Hide Description >";
-
-    return desc14 = true;
-  }
-  else{
-    document.getElementById('anime-desc14').style.display = "none";
-    document.getElementById('bold-info-desc14').innerHTML = "Show Description >";
-    return desc14 = false;
-  }
-}
-
-function showDescription15(){
-  if(desc15 == false){
-    document.getElementById('anime-desc15').innerHTML = anime_list[15].description;
-    document.getElementById('anime-desc15').style.display = "block";
-    document.getElementById('bold-info-desc15').innerHTML = "Hide Description >";
-
-    return desc15 = true;
-  }
-  else{
-    document.getElementById('anime-desc15').style.display = "none";
-    document.getElementById('bold-info-desc15').innerHTML = "Show Description >";
-    return desc15 = false;
-  }
-}
-
-function showDescription16(){
-  if(desc16 == false){
-    document.getElementById('anime-desc16').innerHTML = anime_list[16].description;
-    document.getElementById('anime-desc16').style.display = "block";
-    document.getElementById('bold-info-desc16').innerHTML = "Hide Description >";
-
-    return desc16 = true;
-  }
-  else{
-    document.getElementById('anime-desc16').style.display = "none";
-    document.getElementById('bold-info-desc16').innerHTML = "Show Description >";
-    return desc16 = false;
-  }
-}
-
-function showDescription17(){
-  if(desc17 == false){
-    document.getElementById('anime-desc17').innerHTML = anime_list[17].description;
-    document.getElementById('anime-desc17').style.display = "block";
-    document.getElementById('bold-info-desc17').innerHTML = "Hide Description >";
-
-    return desc17 = true;
-  }
-  else{
-    document.getElementById('anime-desc17').style.display = "none";
-    document.getElementById('bold-info-desc17').innerHTML = "Show Description >";
-    return desc17 = false;
-  }
-}
-
-function showDescription18(){
-  if(desc18 == false){
-    document.getElementById('anime-desc18').innerHTML = anime_list[18].description;
-    document.getElementById('anime-desc18').style.display = "block";
-    document.getElementById('bold-info-desc18').innerHTML = "Hide Description >";
-
-    return desc18 = true;
-  }
-  else{
-    document.getElementById('anime-desc18').style.display = "none";
-    document.getElementById('bold-info-desc18').innerHTML = "Show Description >";
-    return desc17 = false;
-  }
-}
-
-function showDescription19(){
-  if(desc19 == false){
-    document.getElementById('anime-desc19').innerHTML = anime_list[19].description;
-    document.getElementById('anime-desc19').style.display = "block";
-    document.getElementById('bold-info-desc19').innerHTML = "Hide Description >";
-
-    return desc19 = true;
-  }
-  else{
-    document.getElementById('anime-desc19').style.display = "none";
-    document.getElementById('bold-info-desc19').innerHTML = "Show Description >";
-    return desc17 = false;
-  }
-}
-
+// showHome() returns the user to the home page of Seasonime
 function showHome() {
   window.location.href = 'https://seasonime.web.app/';
 }

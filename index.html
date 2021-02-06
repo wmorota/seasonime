@@ -63,6 +63,7 @@
       <div class="col-sm-2" style="margin-bottom:2%;">
         <select id="year" name="year" class="custom-select" required>
             <option value="" selected disabled hidden><b>Year</b></option>
+            <option value="2021">2021</option>
             <option value="2020">2020</option>
             <option value="2019">2019</option>
             <option value="2018">2018</option>
@@ -110,6 +111,7 @@
     <div class="col-sm-2" style="margin-bottom:2%;">
       <select id="list-year" name="list-year" class="custom-select" required>
           <option value="" selected disabled hidden><b>Year</b></option>
+          <option value="2021">2021</option>
           <option value="2020">2020</option>
           <option value="2019">2019</option>
           <option value="2018">2018</option>
@@ -153,7 +155,7 @@
       <p class="start-date-row"> <span id="bold-info-text">Start Date:</span><span id="anime-sd0"></span> </p>
       <p class="episodes-row"> <span id="bold-info-text">Episodes:</span><span id="anime-ep0"></span> </p>
       <p class="mobile-score-row"> <span id="bold-info-text">Score</span><span id="mobile-anime-score0"></span> </p>
-      <p class="desc-row" onMouseOver="this.style.cursor='pointer'" onclick="showDescription0();" id="bold-info-desc0">Show Description > </p>
+      <p class="desc-row" onMouseOver="this.style.cursor='pointer'" onclick="showDescription(this.id);" id="bold-info-desc0">Show Description > </p>
       <p id="anime-desc0"></p>
     </div>
     <div class="col-md-1">
@@ -182,7 +184,7 @@
       <p class="start-date-row"> <span id="bold-info-text">Start Date:</span><span id="anime-sd1"></span> </p>
       <p class="episodes-row"> <span id="bold-info-text">Episodes:</span><span id="anime-ep1"></span> </p>
       <p class="mobile-score-row"> <span id="bold-info-text">Score</span><span id="mobile-anime-score1"></span> </p>
-      <p class="desc-row" onMouseOver="this.style.cursor='pointer'" onclick="showDescription1();" id="bold-info-desc1">Show Description > </p>
+      <p class="desc-row" onMouseOver="this.style.cursor='pointer'" onclick="showDescription(this.id);" id="bold-info-desc1">Show Description > </p>
       <p id="anime-desc1"></p>
     </div>
     <div class="col-md-1">
@@ -211,7 +213,7 @@
       <p class="start-date-row"> <span id="bold-info-text">Start Date:</span><span id="anime-sd2"></span> </p>
       <p class="episodes-row"> <span id="bold-info-text">Episodes:</span><span id="anime-ep2"></span> </p>
       <p class="mobile-score-row"> <span id="bold-info-text">Score</span><span id="mobile-anime-score2"></span> </p>
-      <p class="desc-row" onMouseOver="this.style.cursor='pointer'" onclick="showDescription2();" id="bold-info-desc2">Show Description > </p>
+      <p class="desc-row" onMouseOver="this.style.cursor='pointer'" onclick="showDescription(this.id);" id="bold-info-desc2">Show Description > </p>
       <p id="anime-desc2"></p>
     </div>
     <div class="col-md-1">
@@ -240,7 +242,7 @@
       <p class="start-date-row"> <span id="bold-info-text">Start Date:</span><span id="anime-sd3"></span> </p>
       <p class="episodes-row"> <span id="bold-info-text">Episodes:</span><span id="anime-ep3"></span> </p>
       <p class="mobile-score-row"> <span id="bold-info-text">Score</span><span id="mobile-anime-score3"></span> </p>
-      <p class="desc-row" onMouseOver="this.style.cursor='pointer'" onclick="showDescription3();" id="bold-info-desc3">Show Description > </p>
+      <p class="desc-row" onMouseOver="this.style.cursor='pointer'" onclick="showDescription(this.id);" id="bold-info-desc3">Show Description > </p>
       <p id="anime-desc3"></p>
     </div>
     <div class="col-md-1">
@@ -269,7 +271,7 @@
       <p class="start-date-row"> <span id="bold-info-text">Start Date:</span><span id="anime-sd4"></span> </p>
       <p class="episodes-row"> <span id="bold-info-text">Episodes:</span><span id="anime-ep4"></span> </p>
       <p class="mobile-score-row"> <span id="bold-info-text">Score</span><span id="mobile-anime-score4"></span> </p>
-      <p class="desc-row" onMouseOver="this.style.cursor='pointer'" onclick="showDescription4();" id="bold-info-desc4">Show Description > </p>
+      <p class="desc-row" onMouseOver="this.style.cursor='pointer'" onclick="showDescription(this.id);" id="bold-info-desc4">Show Description > </p>
       <p id="anime-desc4"></p>
     </div>
     <div class="col-md-1">
@@ -298,7 +300,7 @@
       <p class="start-date-row"> <span id="bold-info-text">Start Date:</span><span id="anime-sd5"></span> </p>
       <p class="episodes-row"> <span id="bold-info-text">Episodes:</span><span id="anime-ep5"></span> </p>
       <p class="mobile-score-row"> <span id="bold-info-text">Score</span><span id="mobile-anime-score5"></span> </p>
-      <p class="desc-row" onMouseOver="this.style.cursor='pointer'" onclick="showDescription5();" id="bold-info-desc5">Show Description > </p>
+      <p class="desc-row" onMouseOver="this.style.cursor='pointer'" onclick="showDescription(this.id);" id="bold-info-desc5">Show Description > </p>
       <p id="anime-desc5"></p>
     </div>
     <div class="col-md-1">
@@ -327,7 +329,7 @@
       <p class="start-date-row"> <span id="bold-info-text">Start Date:</span><span id="anime-sd6"></span> </p>
       <p class="episodes-row"> <span id="bold-info-text">Episodes:</span><span id="anime-ep6"></span> </p>
       <p class="mobile-score-row"> <span id="bold-info-text">Score</span><span id="mobile-anime-score6"></span> </p>
-      <p class="desc-row" onMouseOver="this.style.cursor='pointer'" onclick="showDescription6();" id="bold-info-desc6">Show Description > </p>
+      <p class="desc-row" onMouseOver="this.style.cursor='pointer'" onclick="showDescription(this.id);" id="bold-info-desc6">Show Description > </p>
       <p id="anime-desc6"></p>
     </div>
     <div class="col-md-1">
@@ -356,7 +358,7 @@
       <p class="start-date-row"> <span id="bold-info-text">Start Date:</span><span id="anime-sd7"></span> </p>
       <p class="episodes-row"> <span id="bold-info-text">Episodes:</span><span id="anime-ep7"></span> </p>
       <p class="mobile-score-row"> <span id="bold-info-text">Score</span><span id="mobile-anime-score7"></span> </p>
-      <p class="desc-row" onMouseOver="this.style.cursor='pointer'" onclick="showDescription7();" id="bold-info-desc7">Show Description > </p>
+      <p class="desc-row" onMouseOver="this.style.cursor='pointer'" onclick="showDescription(this.id);" id="bold-info-desc7">Show Description > </p>
       <p id="anime-desc7"></p>
     </div>
     <div class="col-md-1">
@@ -385,7 +387,7 @@
       <p class="start-date-row"> <span id="bold-info-text">Start Date:</span><span id="anime-sd8"></span> </p>
       <p class="episodes-row"> <span id="bold-info-text">Episodes:</span><span id="anime-ep8"></span> </p>
       <p class="mobile-score-row"> <span id="bold-info-text">Score</span><span id="mobile-anime-score8"></span> </p>
-      <p class="desc-row" onMouseOver="this.style.cursor='pointer'" onclick="showDescription8();" id="bold-info-desc8">Show Description > </p>
+      <p class="desc-row" onMouseOver="this.style.cursor='pointer'" onclick="showDescription(this.id);" id="bold-info-desc8">Show Description > </p>
       <p id="anime-desc8"></p>
     </div>
     <div class="col-md-1">
@@ -414,7 +416,7 @@
       <p class="start-date-row"> <span id="bold-info-text">Start Date:</span><span id="anime-sd9"></span> </p>
       <p class="episodes-row"> <span id="bold-info-text">Episodes:</span><span id="anime-ep9"></span> </p>
       <p class="mobile-score-row"> <span id="bold-info-text">Score</span><span id="mobile-anime-score9"></span> </p>
-      <p class="desc-row" onMouseOver="this.style.cursor='pointer'" onclick="showDescription9();" id="bold-info-desc9">Show Description > </p>
+      <p class="desc-row" onMouseOver="this.style.cursor='pointer'" onclick="showDescription(this.id);" id="bold-info-desc9">Show Description > </p>
       <p id="anime-desc9"></p>
     </div>
     <div class="col-md-1">
@@ -443,7 +445,7 @@
       <p class="start-date-row"> <span id="bold-info-text">Start Date:</span><span id="anime-sd10"></span> </p>
       <p class="episodes-row"> <span id="bold-info-text">Episodes:</span><span id="anime-ep10"></span> </p>
       <p class="mobile-score-row"> <span id="bold-info-text">Score</span><span id="mobile-anime-score10"></span> </p>
-      <p class="desc-row" onMouseOver="this.style.cursor='pointer'" onclick="showDescription10();" id="bold-info-desc10">Show Description > </p>
+      <p class="desc-row" onMouseOver="this.style.cursor='pointer'" onclick="showDescription(this.id);" id="bold-info-desc10">Show Description > </p>
       <p id="anime-desc10"></p>
     </div>
     <div class="col-md-1">
@@ -472,7 +474,7 @@
       <p class="start-date-row"> <span id="bold-info-text">Start Date:</span><span id="anime-sd11"></span> </p>
       <p class="episodes-row"> <span id="bold-info-text">Episodes:</span><span id="anime-ep11"></span> </p>
       <p class="mobile-score-row"> <span id="bold-info-text">Score</span><span id="mobile-anime-score11"></span> </p>
-      <p class="desc-row" onMouseOver="this.style.cursor='pointer'" onclick="showDescription11();" id="bold-info-desc11">Show Description > </p>
+      <p class="desc-row" onMouseOver="this.style.cursor='pointer'" onclick="showDescription(this.id);" id="bold-info-desc11">Show Description > </p>
       <p id="anime-desc11"></p>
     </div>
     <div class="col-md-1">
@@ -502,7 +504,7 @@
         <p class="start-date-row"> <span id="bold-info-text">Start Date:</span><span id="anime-sd12"></span> </p>
         <p class="episodes-row"> <span id="bold-info-text">Episodes:</span><span id="anime-ep12"></span> </p>
         <p class="mobile-score-row"> <span id="bold-info-text">Score</span><span id="mobile-anime-score12"></span> </p>
-        <p class="desc-row" onMouseOver="this.style.cursor='pointer'" onclick="showDescription12();" id="bold-info-desc12">Show Description > </p>
+        <p class="desc-row" onMouseOver="this.style.cursor='pointer'" onclick="showDescription(this.id);" id="bold-info-desc12">Show Description > </p>
         <p id="anime-desc12"></p>
       </div>
       <div class="col-md-1">
@@ -531,7 +533,7 @@
         <p class="start-date-row"> <span id="bold-info-text">Start Date:</span><span id="anime-sd13"></span> </p>
         <p class="episodes-row"> <span id="bold-info-text">Episodes:</span><span id="anime-ep13"></span> </p>
         <p class="mobile-score-row"> <span id="bold-info-text">Score</span><span id="mobile-anime-score13"></span> </p>
-        <p class="desc-row" onMouseOver="this.style.cursor='pointer'" onclick="showDescription13();" id="bold-info-desc13">Show Description > </p>
+        <p class="desc-row" onMouseOver="this.style.cursor='pointer'" onclick="showDescription(this.id);" id="bold-info-desc13">Show Description > </p>
         <p id="anime-desc13"></p>
       </div>
       <div class="col-md-1">
@@ -560,7 +562,7 @@
         <p class="start-date-row"> <span id="bold-info-text">Start Date:</span><span id="anime-sd14"></span> </p>
         <p class="episodes-row"> <span id="bold-info-text">Episodes:</span><span id="anime-ep14"></span> </p>
         <p class="mobile-score-row"> <span id="bold-info-text">Score</span><span id="mobile-anime-score14"></span> </p>
-        <p class="desc-row" onMouseOver="this.style.cursor='pointer'" onclick="showDescription14();" id="bold-info-desc14">Show Description > </p>
+        <p class="desc-row" onMouseOver="this.style.cursor='pointer'" onclick="showDescription(this.id);" id="bold-info-desc14">Show Description > </p>
         <p id="anime-desc14"></p>
       </div>
       <div class="col-md-1">
@@ -589,7 +591,7 @@
         <p class="start-date-row"> <span id="bold-info-text">Start Date:</span><span id="anime-sd15"></span> </p>
         <p class="episodes-row"> <span id="bold-info-text">Episodes:</span><span id="anime-ep15"></span> </p>
         <p class="mobile-score-row"> <span id="bold-info-text">Score</span><span id="mobile-anime-score15"></span> </p>
-        <p class="desc-row" onMouseOver="this.style.cursor='pointer'" onclick="showDescription15();" id="bold-info-desc15">Show Description > </p>
+        <p class="desc-row" onMouseOver="this.style.cursor='pointer'" onclick="showDescription(this.id);" id="bold-info-desc15">Show Description > </p>
         <p id="anime-desc15"></p>
       </div>
       <div class="col-md-1">
@@ -618,7 +620,7 @@
         <p class="start-date-row"> <span id="bold-info-text">Start Date:</span><span id="anime-sd16"></span> </p>
         <p class="episodes-row"> <span id="bold-info-text">Episodes:</span><span id="anime-ep16"></span> </p>
         <p class="mobile-score-row"> <span id="bold-info-text">Score</span><span id="mobile-anime-score16"></span> </p>
-        <p class="desc-row" onMouseOver="this.style.cursor='pointer'" onclick="showDescription16();" id="bold-info-desc16">Show Description > </p>
+        <p class="desc-row" onMouseOver="this.style.cursor='pointer'" onclick="showDescription(this.id);" id="bold-info-desc16">Show Description > </p>
         <p id="anime-desc16"></p>
       </div>
       <div class="col-md-1">
@@ -647,7 +649,7 @@
         <p class="start-date-row"> <span id="bold-info-text">Start Date:</span><span id="anime-sd17"></span> </p>
         <p class="episodes-row"> <span id="bold-info-text">Episodes:</span><span id="anime-ep17"></span> </p>
         <p class="mobile-score-row"> <span id="bold-info-text">Score</span><span id="mobile-anime-score17"></span> </p>
-        <p class="desc-row" onMouseOver="this.style.cursor='pointer'" onclick="showDescription17();" id="bold-info-desc17">Show Description > </p>
+        <p class="desc-row" onMouseOver="this.style.cursor='pointer'" onclick="showDescription(this.id);" id="bold-info-desc17">Show Description > </p>
         <p id="anime-desc17"></p>
       </div>
       <div class="col-md-1">
@@ -676,7 +678,7 @@
         <p class="start-date-row"> <span id="bold-info-text">Start Date:</span><span id="anime-sd18"></span> </p>
         <p class="episodes-row"> <span id="bold-info-text">Episodes:</span><span id="anime-ep18"></span> </p>
         <p class="mobile-score-row"> <span id="bold-info-text">Score</span><span id="mobile-anime-score18"></span> </p>
-        <p class="desc-row" onMouseOver="this.style.cursor='pointer'" onclick="showDescription18();" id="bold-info-desc18">Show Description > </p>
+        <p class="desc-row" onMouseOver="this.style.cursor='pointer'" onclick="showDescription(this.id);" id="bold-info-desc18">Show Description > </p>
         <p id="anime-desc18"></p>
       </div>
       <div class="col-md-1">
@@ -705,7 +707,7 @@
         <p class="start-date-row"> <span id="bold-info-text">Start Date:</span><span id="anime-sd19"></span> </p>
         <p class="episodes-row"> <span id="bold-info-text">Episodes:</span><span id="anime-ep19"></span> </p>
         <p class="mobile-score-row"> <span id="bold-info-text">Score</span><span id="mobile-anime-score19"></span> </p>
-        <p class="desc-row" onMouseOver="this.style.cursor='pointer'" onclick="showDescription19();" id="bold-info-desc19">Show Description > </p>
+        <p class="desc-row" onMouseOver="this.style.cursor='pointer'" onclick="showDescription(this.id);" id="bold-info-desc19">Show Description > </p>
         <p id="anime-desc19"></p>
       </div>
       <div class="col-md-1">
@@ -721,8 +723,8 @@
       </div>
     </div>
 
+    <br>
 </div>
-
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -734,5 +736,6 @@
 <!-- JS Scripts
 	 ================================================== -->
    <script src="js/anime.js"></script>
+
 
 </html>
