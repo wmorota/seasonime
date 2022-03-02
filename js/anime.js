@@ -13,7 +13,7 @@ function getHomeFormInput() {
   var input_y = document.getElementById("year");
   year = input_y.options[input_y.selectedIndex].value;
 
-  if(year == 2022)  {
+  if((year == 2022) && (season == "summer" || season == "fall"))  {
     alert("The animes in this season have not started airing yet 🥴 Please try again.");
   }
   else{
@@ -35,7 +35,7 @@ function getListFormInput() {
   var input_y = document.getElementById("list-year");
   year = input_y.options[input_y.selectedIndex].value;
 
-  if(year == 2022)  {
+  if((year == 2022) && (season == "summer" || season == "fall"))  {
     alert("The animes in this season have not started airing yet 🥴 Please try again.");
   }
   else{
